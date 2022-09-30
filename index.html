@@ -1,0 +1,180 @@
+<!-- 
+    Hey guys !!!!
+    Don't forget to save and refresh your site everytime you add something new.
+    We assign classes to items so that we can style them individually. conversely, we can also use the same class name so that we are able to give the same style to any other item with the same class name
+-->
+
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <!-- head section of our webpage.  -->
+    <head>
+        <title>Sample site</title>
+        <!-- Link  to our stylesheet -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- This container div will have everything in our body -->
+        <div class="container">
+            <!-- The hero section has our navigation bar and our banner -->
+            <section class="Hero">
+                <!-- navbar will have a logo and the navigation items -->
+                <div class="navbar">
+                    <!-- Used text instead of a logo because I'm lazy to create one or look for one. You can try making one if you're in the mood -->
+                    <span class="logo"><a href="#">Wild wild world</a></span>
+                    <!-- 
+                        unordered list is called with the "ul" and list items with "li"
+                        a href="#" simply means a hyperlink that does not take you anywhere
+                    -->
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Explore</a></li>
+                        <li><a href="#">Schedule a tour</a></li>
+                    </ul>
+                </div>   
+                <div class="Hero-Text">
+                    <h1>Where nature and wonder collide</h1>
+                    <a class="primary" href="#">Visit our island</a>
+                </div>
+            </section>
+            <section class="info">
+                <h2 class="infohead">Why visit here of all places?</h2>
+                <p>The island is a hub for some of the rarest beasts seen in nature. From the most graceful to some of the most gore animals the planet has to offer.he balance between the truly wild and the mild makes your experience like none other that you have experienced. It is basically a paradise for animal lovers. For those that love bird watching, the island has been listed among the top 25 destinations for bird watchingwith more than 86 rare species of birds. Finally the island boasts over 67 unique and rare plant types to <a href="#"> explore</a></p>
+            </section>
+            <section class="history">
+                <div class="img">
+                </div>
+                <div class="text">
+                    <h2 class="texthead">Our journey to discover this wonderland</h2>
+                    <p>This place was discovered by 4 adventure seeking boys who wandered out into the sea hoping to travel the world on a patched up sail boat. Needless to say, we failed to travel the world on our boat, but got the world to travel to us. Since landing on the island, we've attracted over 30,000 unique visitors and we hope everyone visits this place at least once in their lifetime.</p>
+                    <a href="#">go to about</a>
+                </div>
+            </section>
+            <!-- 
+                In this section you may notice we've nested lots of divs inside our divs.
+                This is because we're trying to achieve a somewhat complex layout with simple means.
+                Although there are better ways to get that layout, this is to show that with little knowledge you can still achieve something beautiful.
+                It will make more sense when we get into the css 
+             -->
+            <section class="images">
+                <div class="images-text">
+                    <h3 class="highlight">jungle expedition</h3>
+                    <h2 class="texthead">Traverse the jungle and discover new wildlife</h2>
+                    <p>Led by a team of tracking experts, you will journey through the thick forest to the pond that sits smack down at the center of the island, all the while exploring and uncovering animal and plant species you didn't even know existed. </p>
+                    <p>The fullfilling sense of accomplishment and oneness with nature will give you plenty of ecstasy to last a full year. Our island prides itself in this jungle journey much more than anything else.</p>
+                </div>
+                <div class="image-container">
+                    <div class="container-col1">
+                        <div class="img1">
+
+                        </div>
+                        <div class="image-text">
+                            <p>Wild moose tracking done in the dark of night</p>
+                        </div>
+                    </div>
+                    <div class="container-col2">
+                        <div class="row">                               
+                            <div class="img2">
+                                <div class="image-text">
+                                    <p>Wild moose tracking done in the dark of night</p>
+                                </div>
+                            </div>
+                            <div class="img2">
+                                <div class="image-text">
+                                    <p>Wild moose tracking done in the dark of night</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">                              
+                            <div class="img2">
+                                <div class="image-text">
+                                    <p>Wild moose tracking done in the dark of night</p>
+                                </div>
+                            </div>
+                            <div class="img2">
+                                <div class="image-text">
+                                    <p>Wild moose tracking done in the dark of night</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 
+                Just like the previous section, we're nesting a lot here too!
+             -->
+            <section class="testimonials">
+                <h1 class="highlight">Peer reviews</h1>
+                <h2 class="texthead">Here's what these lovely people had to say</h2>
+                <div class="items">
+                    <div class="item">
+                        <div class="item-img"></div>
+                        <h3>I had the most incredible time of my life here. can't wait to come back next year</h3>
+                        <p>~ Sin</p>
+                    </div>
+                    <div class="item">
+                        <div class="item-img"></div>
+                        <h3>The hospitality was amazing; I still can't believe people could be so welcoming</h3>
+                        <p>~ Grid</p>
+                    </div>
+                    <div class="item">
+                        <div class="item-img"></div>
+                        <h3>The only thing I hated about this place was that I couldn't stay forever</h3>
+                        <p>~ Maya</p>
+                    </div>
+                    <div class="item">
+                        <div class="item-img"></div>
+                        <h3>My daughter could't leave the island, we had to put her to sleep first then leave. That's how awesome the place was</h3>
+                        <p>~ Human being</p>
+                    </div>
+                </div>
+            </section>
+            <!-- 
+                As usual, each site must have a contact place.
+                A form will help us send data to wherever we want. 
+                We've added the select input type this time round. Please get yourself used to it.
+             -->
+            <section class="contact">
+                <h3 class="highlight">schedule a tour</h3>
+                <h1 >Reach out</h1>
+                <p>We'll get to you shortly after we recieve your message</p>
+                <form class="form">
+                    <!-- 
+                        Yes we can add other divs in a form and it will still work just fine. 
+                        There are no rules to how you achieve beauty....Well there are a few but don't mind them
+                     -->
+                    <div class="inputs">
+                            <label>name: </label>
+                            <input type="text" placeholder="name">
+                            <label>email: </label>
+                            <input type="email" placeholder="email">
+                            <label>from</label>
+                            <input type="date">
+                            <label>to</label>
+                            <input type="date">
+                        <label>number of visitors</label>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</oprion>
+                            <option>4</option>
+                        </select><br />
+                        <input class='submit' type="submit" value="send">
+                    </div>
+                    <div class="message">
+                        <p>We're glad you have decided to visit our online home. Feel free to check on us. send us an email on <span class="hl">hello@wildworld.com</span> just so we can know who this wonderful person is.</p><br>
+                        <p>You may be afraid that you'd have to travel all the way to our island just to meet and greet but thankfully that is not the case. We probably have offices right around your corner.</p>
+                        <p>check out our <span class="highlight">locations</span></p>
+                        <p class="hl">4th street, main</p>
+                        <p class="hl">12 st, kings</p>
+                        <p class="hl">somewhere in space</p>
+                    </div>
+                </form>
+            </section>
+            <section class="footer">
+                <p>©2022 All Rights Reserved. Wild Wild World</p>
+            </section>
+        </div>
+    </body>
+</html>

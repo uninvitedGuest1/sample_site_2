@@ -1,0 +1,415 @@
+/* 
+Make sure that the name of you css file matches the name inside your html "link" file otherwise the changes won't be reflected
+
+Because we shall use these a lot... Margin is space outside a border while padding is space inside a border
+
+Save and refresh after every addition so that you may see what changes have been made.
+*/
+
+
+/* 
+This next step is important as it gives us control over our styling.
+some html elements come with their margin and padding so this helps set every item to have margin 0 and padding 0
+box-sizing is so that items don't flow out of our page when we add margin to them
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+defining your own font-family is key to making a site convey the feeling you want it to.
+*/
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* 
+every item with the class "hl" should be lime
+*/
+.hl {
+    color: lime;
+}
+
+/* 
+width: 100vw 
+
+
+*/
+.Hero {
+    width: 100vw;/* means set the width to 100% of the "view width". essentially screen width.  */
+    height: 100vh; /* Same applies with height: 100vh "view height" */
+    background: url('moose.jpg');/* "background" can be used to define background-image or background-color */
+    background-position: center;/* Sets the center of the image to the center of the screen */
+    background-size: cover;/* Scales the image to fit the screen without changing aspect ratio */
+    background-repeat: no-repeat;/* If the image is too small it will simply enlarge it rather than have it be repeated multiple times */
+}
+
+.navbar {
+    display: flex; /* This takes the children of "navbar" and puts them in the same line on the x-axis */
+    justify-content: space-between; /* sends the children to the furthest points from each other */
+    align-items: center; /* puts the children in the center of the y-axis */
+    height: 60px; /* Gives the navbar a specified height */
+}
+
+.logo {
+    margin-left: 50px; /* adds 50px margin to the left of "logo" */
+}
+
+/* 
+ To style a hyperlink, we call it out individually. In this case we are styling all the hyperlinks in the "navbar"
+*/
+.navbar a {
+    color: #fff; /* O _ O */
+    font-size: 18px; /* - _ - */
+    text-decoration: none; /* removes the underlining */
+}
+
+/* 
+Below we give the logo a different color. 
+We could not assign a color inside .logo that we called earlier because it is a link and needs to be called separately
+
+The space between .logo and a indicates that a is a child of .logo
+*/
+.logo a {
+    color: coral;
+}
+
+.navbar ul a {
+    padding-bottom: 10px; /* Adds a padding to the bottom of our link */
+    transition: .4s; /* This helps later on when we add a hover effect. Without this line our effects pop up immediately. Try removing this after adding the hover effect to see what I mean if you don't get it */
+}
+
+/* 
+inside navbar, find ul and inside ul find a.
+:hover means as you hover over this a...
+make sure there is no space between a and :hover
+*/
+.navbar ul a:hover {
+    border-bottom: 2px solid lime; /* on hover, this item will get a border-bottom */
+}
+/* 
+navbar -> ul -> li
+*/
+.navbar ul li{
+    display: inline; /* make the list items be on the same line */
+    margin-right: 50px; /* Add a margin to the right */
+}
+
+.Hero-Text {
+    width: 100%; /* fill up the same width as its parent (Hero)*/
+    height: calc(100% - 60px); /* Take the height of the parent (Hero) and then remove 60px(height of navbar). Try this with height 100% if you don't get what I mean*/
+    display: flex; /* let the children be displayed on the same line in the x-axis */
+    flex-direction: column; /* let the children be displayed on top of each other as usual 
+    At this point you may be asking why we wrote these two previous lines of code as they cancel each other out.
+    Well, it is so that we can access justify-content and align-items which can only be used after calling display: flex.
+    */
+    justify-content: center;
+     /* 
+    since we changed flex-direction to column (it is on row by default), justify-content now places items in the center of the y axis
+    */
+    align-items: center;
+    /* just like justify-content, the job of align items has now changed to the x-axis */
+    color: #fff;
+    font-size: 25px;
+}
+
+.primary {
+    text-decoration: none; /* remove underlining */
+    background: lime; /* background-color */
+    border: 1px solid lime; /* add a lime border */
+    font-size: 18px; /*  */
+    padding: 10px 20px;/* padding top and bottom: 10px, left and right: 20px */
+    border-radius: 20px; /* Give it a beautiful curve */
+    color: navy; /* A color that looks like our background to create a nice effect */
+    margin-top: 20px; /*  */
+    transition: .5s; /* refer to .navbar ul a{...} */
+}
+
+.Hero-Text a:hover {
+    background-color: transparent; /* - _ - */
+    color: lime; /* font color */
+    border: 1px solid lime; 
+}
+
+/* 
+
+
+*/
+
+.info {
+    padding: 100px ;
+    background: #000; /* black background to continue in the spirit of the image from the previous div */
+    color: #fff;
+}
+
+.infohead {
+    color: coral;
+}
+
+/* 
+inside info, find that p tag and style it this way
+*/
+.info p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif; /* We can always assign different fonts to different parts of our site */
+    line-height: 1.7; /* ... */
+    margin-bottom: 15px;
+}
+
+/* 
+the a tag inside info and the a tag inside text have the ensuing styles.
+that comma means "and"
+*/
+.info a, .text a {
+    text-decoration: none;
+    color: lime;
+    border-bottom: 1px solid lime;
+
+}
+
+
+.history {
+    width: 100%; /* Fill all the width of its parent (container)*/
+    display: flex; /* All children of history will be on the same line in the x-axis */
+    padding: 0 300px 50px; /* Padding top: 0, padding left and right: 300px, padding bottom 50px */
+    background: #000; /* * _ * */
+    color: #fff; 
+}
+
+.img {
+    width: 50%; /* set the width of this div to be half that of its parent */
+    height: 300px; /* Set the height of this div to be 300px */
+    background: red;
+}
+
+.text {
+    width: 50%; /* set the width of this div to be half that of its parent */
+    margin-left: 20px;
+    line-height: 1.5;
+}
+
+.texthead {
+    color: coral;
+}
+
+/* The p tag in text gets this margin */
+.text p {
+    margin-top: 30px;
+}
+
+/* 
+Take note. We shall start working on the "images" div from here. The name is lousy so don't pay it any mind. 
+Essentially we want to create 4 columns, 2 of which have 2 rows each.
+We'll do this by calling display:flex a couple of times. 
+This is why we had many divs nested in other divs. take your time and study the flow so you can grasp it well.
+*/
+.images {
+    background: #000;
+    padding: 100px; /* padding on all sides to be 100px */
+    display: flex; /* All children of history will be on the same line in the x-axis */
+}
+
+/* All items with highlight class get this style */
+.highlight {
+    color: lime;
+    text-transform: uppercase; /* sets all text to uppercase */
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+.images-text {
+    margin-right: 20px;
+}
+
+.images-text p {
+    margin-top: 30px;
+    color: #fff;
+    line-height: 1.8;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-col1 {
+    width: 300px;
+    height: 480px;
+    background-color: red;
+    margin-right: 10px;
+    color: transparent;
+}
+
+.container-col1:hover {
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    height: 250px;
+    color: transparent;
+    transition: .5s ease;
+}
+
+.image-text{
+    transition: .8s;
+    position: relative;
+    top: 180px;
+}
+
+.container-col1 .image-text {
+    position: relative; 
+    /* 
+    basically keep its position the normal way it is. 
+    we call out position so that we can be able to set how many pixels from top, bottom, left or right our item should fall.
+    */
+    top: 400px; /* Means that from the top, put it 400px down */
+}
+
+.row :hover {
+    color: #fff;
+    /* This linear gradient means black at the top and then transparent at the bottom */
+}
+
+.img2 {
+    width: 250px;
+    background: deeppink;
+    margin: 10px;
+}
+
+.im
+
+.image-text {
+    position: relative; /* refer to .container-col1 .image-text */
+    bottom: -100px;
+}
+
+.testimonials {
+    padding: 100px; /* Add 100px padding to all sides */
+    background-color: #000;
+}
+
+.h1 {
+    color: lime;
+}
+
+.h2 {
+    color: #fff;
+}
+
+.h1 {
+    text-align: right; /* as it says */
+}
+
+.items {
+    display: flex;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    color: #fff;
+    margin: 50px 10px;
+}
+
+.item-img {
+    position: relative;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: brown;
+    transform: translateX(50%);
+    margin-bottom: 40px;
+}
+
+.item p {
+    margin-top: 15px;
+}
+
+.contact {
+    background: #000;
+    padding: 50px 100px; 
+    color: #fff;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.inputs {
+    width: 500px;
+    background: coral;
+    padding: 100px;
+    border-radius: 20px; /* Adds 20px curve to all corners */
+}
+
+.input-row {
+    display: flex;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 100%; /* Each input takes up 100% of the width available */
+    text-align: center;
+    border: none; /* Makes a borderless input */
+    outline: none; /* 
+    Removes input outline
+    Before writing this line, click on your input. 
+    Write this line then save, refresh and click on the input again to see what I mean
+     */
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+label {
+    color: #000;
+}
+
+select {
+    border: none;
+    outline: none;
+    margin-left: 50px;
+    background: transparent;
+    color: #000;
+}
+
+.submit {
+    width: fit-content;
+    background: #000;
+    color: coral;
+    border: 1px solid #000;
+    margin-top: 15px;
+}
+
+.submit:hover {
+    background: coral;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.message {
+    width: 300px;
+    margin-left: 20px;
+}
+
+.footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+/* 
+Congs on following this to the end. 
+I'll let you know that it is physically impossible for pigs to look up at the sky...so enjoy it.
+*/
